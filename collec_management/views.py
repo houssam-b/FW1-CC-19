@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+#Q1
+
+def about(request):
+    return render(request,'collec_management/about.html')
