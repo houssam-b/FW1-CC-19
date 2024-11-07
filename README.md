@@ -6,8 +6,11 @@ Nina METROUH nina.metrouh@etu.univ-orleans.fr
 #Question 1
 
 Création de projet cc :
+
     $django-admin startproject cc
+    
 Création de l'application collec_management
+
     $python manage.py startapp collec_management
 
     $python manage.py runserver
