@@ -6,8 +6,14 @@ from .models import Collec
 def about(request):
     return render(request,'collec_management/about.html')
 
+#Q5
+def collection_detail(request,n):
+    collection=Collec.objects.get(pk=n)
+    return render(request,"collec_management/collection_detail.html",{'collection':collection})
+
 #Q6
 
 def all(request):
     collection = Collec.objects.all()
     return render(request, 'collec_management/all.html',{'collection':collection})
+

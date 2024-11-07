@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{ collec.title }}</td>
                     <td>{{ collec.date }}</td>
-                    <td><a href="{{% url 'collection_detail' collec.id }}">Voir les détails de la collection</a></td>
+                    <td><a href="{ % url 'collection_detail' collec.id }">Voir les détails de la collection</a></td>
                 </tr>
             {% endfor %}
         </tbody>
