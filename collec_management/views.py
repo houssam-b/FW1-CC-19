@@ -5,6 +5,7 @@ from .forms import CollecForm
 def about(request):
     return render(request,'collec_management/about.html')
 
+#Q7
 
 def new_collection(request):
     if request.method == 'POST' :
