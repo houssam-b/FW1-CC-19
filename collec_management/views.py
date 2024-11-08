@@ -9,10 +9,6 @@ def about(request):
     return render(request,'collec_management/about.html')
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 #Q5
 
 def collection_detail(request,n):
