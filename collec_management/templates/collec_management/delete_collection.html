@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Suppression</title>
+    </head>
+    <body>
+        <h1 style="color:red">Êtes-vous sûr de vouloir supprimer cette collection ?</h1>
+        <p><strong>{{collection.title}}</strong></p>
+        <p>Description : {{collection.description}}</p>
+        <p> Date de création : {{ collection.date }}</p>
+
+        <form method="POST">
+            {%csrf_token%}
+            <button type="submit">Oui, supprimer</button>
+        </form>
+        <br>
+        <a href="{% url 'all' %}">Retour à la liste des collections</a>
+    </body>
+</html>
