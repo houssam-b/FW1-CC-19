@@ -5,4 +5,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('all/', views.all, name='all'),
     path('collection/<int:n>', views.collection_detail, name='collection_detail'),
+    path('change/<int:n>', views.collection_modif, name='collection_modif')
 ]
