@@ -23,6 +23,15 @@ def all(request):
     collection = Collec.objects.all()
     return render(request, 'collec_management/all.html',{'collection':collection})
 
+#Q8
+
+def delete_collection(request,n):
+    collection= Collec.objects.get(pk=n)
+    if request.method == 'POST':
+       collection.delete()
+       return redirect('all')
+    return render(request,"collec_management/delete_collection.html",{'collection':collection})
+
 #Q9
 
 def collection_modif(request, n):
@@ -36,12 +45,3 @@ def collection_modif(request, n):
         form = CollecForm(instance=collection)
         
     return render(request, 'collec_management/collection_modif.html', {'form': form, 'collection': collection})
-
-#Q8
-
-def delete_collection(request,n):
-    collection= Collec.objects.get(pk=n)
-    if request.method == 'POST':
-       collection.delete()
-       return redirect('all')
-    return render(request,"collec_management/delete_collection.html",{'collection':collection})

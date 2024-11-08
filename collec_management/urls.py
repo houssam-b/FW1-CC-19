@@ -6,11 +6,7 @@ urlpatterns = [
     path('collection/<int:n>', views.collection_detail, name='collection_detail'),
     path('delete/<int:n>', views.delete_collection, name='delete_collection'),
     path('new/', views.new_collection, name='new_collection'),
-<<<<<<< HEAD
     path('change/<int:n>', views.collection_modif, name='collection_modif'),
-    
-=======
     path('all/', views.all, name='all'),
->>>>>>> dev
 ]
 
