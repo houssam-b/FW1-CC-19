@@ -19,7 +19,7 @@ def new_collection(request):
             collection = form.save(commit=False)
             collection.date = timezone.now()
             collection.save()
-            return redirect('home')
+            return redirect('all')
 
 
     else :

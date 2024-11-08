@@ -1,12 +1,12 @@
+{% extends 'menu.html' %}
+{% load django_bootstrap5 %}
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Liste des Collections</title>
-</head>
-<body>
-    <h1>Liste des Collections</h1>
+{% block title %}Liste des Collections {% endblock %}
+
+{% block content %}
+
+
+   
     <table border="1">
         <thead>
             <tr>
@@ -25,5 +25,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+    {% endblock %}

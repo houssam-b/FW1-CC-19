@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Détails de la Collections</title>
-    </head>
-    <body>
+{% extends 'menu.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}Détails de la Collections
+{% endblock %}
+
+{% block content %}
+
+
+      
+
+
+
+      
          <h1>{{collection.title}}</h1>
          <p>{{collection.description}}</p>
          <p><strong> Date de création : </strong>{{collection.date}}</p>
          <h3><a href="/all">Retour à l'accueil</a></h3>
-    </body>
-</html>
+         {% endblock %}
