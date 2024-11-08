@@ -23,6 +23,28 @@ def all(request):
     collection = Collec.objects.all()
     return render(request, 'collec_management/all.html',{'collection':collection})
 
+
+#Q7
+
+def new_collection(request):
+    if request.method == 'POST' :
+        form =CollecForm(request.POST)
+        if form.is_valid():
+            collection = form.save(commit=False)
+            collection.date = timezone.now()
+            collection.save()
+            return redirect('all')
+
+
+    else :
+
+            form=CollecForm()
+
+
+
+            return render(request , 'collec_management/new_collection.html' , {'form' : form})
+        
+
 #Q8
 
 def delete_collection(request,n):
