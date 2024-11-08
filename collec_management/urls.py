@@ -11,6 +11,3 @@ urlpatterns = [
     path('collection/<int:n>', views.collection_detail, name='collection_detail'),
 ]
 
-    
-
-
